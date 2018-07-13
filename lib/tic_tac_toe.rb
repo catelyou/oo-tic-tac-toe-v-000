@@ -75,8 +75,6 @@ class TicTacToe
         return wincombo
       elsif @board[wincombo[0]] == "O" && @board[wincombo[1]] == "O" && @board[wincombo[2]] == "O"
         return wincombo
-      else
-        return false
       end
     end
   end
