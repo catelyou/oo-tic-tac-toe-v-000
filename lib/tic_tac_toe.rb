@@ -71,10 +71,16 @@ class TicTacToe
 
   def won?
     WIN_COMBINATIONS.each do |wincombo|
-      if wincombo[0] == "X" && wincombo[1] == "X" && wincombo[2] == "X"
-        return wincombo
-      elsif wincombo[0] == "O" && wincombo[1] == "O" && wincombo[2] == "O"
-        return wincombo
+      windex0 = combo[0]
+      windex1 = combo[1]
+      windex2 = combo[2]
+
+      position_0 = @board[windex0]
+      position_1 = @board[windex1]
+      position_2 = @board[windex2]
+
+      if position_taken?(windex0) && position_0 == position_1 && position_1 == position_2
+        return combo
       else
         return false
       end
